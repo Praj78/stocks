@@ -16,6 +16,7 @@ function submitHandler() {
 }
 
 function calculateProfitAndLoss(initial,quantity,current){
+    if(initial>0 && quantity >0 && current >0){
     if(initial >current){
 var loss = (initial - current) * quantity;
 var lossPercentage = (loss / initial) * 100;
@@ -26,6 +27,7 @@ var profitPercentage = (profit / initial) * 100;
 showOutput("hey the profit is "+ profit +" and the percent is "+profitPercentage+"%");
     }else{
 showOutput("No pain no gain and No gain no pain");
+    }
     }
 }
 function showOutput(message){
